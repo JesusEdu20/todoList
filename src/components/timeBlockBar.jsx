@@ -1,6 +1,5 @@
 import "./timeBlockBar.css"
-import { BlockTime } from "./blockTime.jsx";
-import { useState } from "react"
+
 
 export function TimeBlockBar({handleRemoveTimeBlock, handleSetTimeBlock, handleConfigTime, placeholder, children}){
 
