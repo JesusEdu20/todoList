@@ -1,0 +1,23 @@
+.block-time-container{
+
+    display: flex;
+    width: 90%;
+    height: 90%;
+    justify-content: center;
+    align-items: center;
+    /* borders */
+    border: 1px solid white;
+    border-top: none;
+    border-bottom: none;
+    border-right: 0;
+
+    text-align: center;
+    font-family: Poppins, sans-serif;
+
+    /* color */
+    /* background-color: rgba(160, 164, 172, 0.733); */
+    color: white;
+
+    backdrop-filter: blur(20px);
+    
+}
