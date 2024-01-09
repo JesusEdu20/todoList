@@ -1,7 +1,7 @@
 {
   "name": "platzi-intro-react-base",
   "version": "0.1.0",
-  "homepage": "https://jesusedu20.github.io/todoList/build",
+  "homepage": "https://jesusedu20.github.io/todoList/",
   "dependencies": {
     "react": "^18",
     "react-dom": "^18",
