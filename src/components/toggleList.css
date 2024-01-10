@@ -1,0 +1,49 @@
+.clear-list-btn{
+
+    display: inline-block;
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    z-index: 1;
+    right: 20px;
+    top: 10px;
+    color: white;
+    cursor: pointer;
+}
+
+.complete-tasks-list__options{
+    position: absolute;
+    z-index: 1;
+    width: auto;
+    max-width: 100%;
+    height: auto;
+    max-height: 100%;
+    padding: 10px;
+    top: 36px;
+    right: 28px;
+    background-color: aliceblue;
+    list-style: none;
+    border-radius: 6px;
+    background-color: rgb(220 232 243 / 46%) ;
+    backdrop-filter: blur(20px);
+    border: 1px solid white;
+    /* display: none; */
+    
+
+    li{
+        padding: 2px 10px;
+        font-size: 1.6rem;
+        font-family: Poppins;
+        color: white;
+        cursor: pointer;
+        border-radius: 6px;
+        transition: background-color 0.5s;
+
+    }
+
+    li:hover{
+        background-color: rgba(74, 75, 77, 0.753);
+    }
+}
+
+

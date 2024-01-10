@@ -31,14 +31,24 @@ function App() {
    setTask(newTasks)
   }
   //Agregar tarea
-  function handleSetTask(textInput){
-    let newTask = {
-      id: tasks.length + Date.now(),
-      content: textInput.value, 
-     } 
-     setTask( prevTasks => [...prevTasks, newTask] )
-     textInput.value = ""
-  }
+  function handleSetTask(inputElement){
+    const text = inputElement.value;
+
+    if(typeof text === "string" && text.trim() !== ""){
+      let newTask = {
+        id: tasks.length + Date.now(),
+        content: text, 
+      } 
+      setTask( prevTasks => [...prevTasks, newTask] )
+      inputElement.value = ""
+    }
+}
+
+
+//limpiar lista de tareas realizadas 
+function clearFineshedTaskList(){
+  setCompletedTask([])
+}
 
   //Agregar bloque de tiempo
   function handleSetTimeBlock(){
@@ -50,6 +60,9 @@ function App() {
             setTimeBlock([...timeBlock, newTimeBlock])
         }    
     }
+
+
+
 
   //Eliminar bloque de tiempo
   function handleRemoveTimeBlock(){
@@ -82,7 +95,7 @@ function App() {
           {timeBlock.map( block => <BlockTime time={block.minutes} key={block.id}></BlockTime> ) } 
           </TimeBlockBar>
 
-          <CompletedTasksList>
+          <CompletedTasksList clearListHandler={clearFineshedTaskList}>
             { completedTasks.map ( task => <Task key={task.id} id={task.id} text={task.content}></Task>) }
           </CompletedTasksList>
         </div>
